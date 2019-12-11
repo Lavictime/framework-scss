@@ -1,0 +1,57 @@
+body{
+
+  font-family: $base-font;
+  font-size: $base-fontsize;
+  font-weight: 400;
+  line-height: $base-lineheight;
+  color: $c-font-base;
+
+  @media (min-width: $max-width-mobile){
+    $base-fontsize: $base-fontsize+.075rem;
+    font-size: $base-fontsize;
+  }
+  @media (min-width: $min-width-tablet){
+    $base-fontsize: $base-fontsize+.150rem;
+    font-size: $base-fontsize;
+  }
+  @media (min-width: $min-width-desktop){
+    $base-fontsize: $base-fontsize+.225rem;
+    font-size: $base-fontsize;
+  }
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+  line-height: $title-lineheight;
+  font-size: $fontsize-2;
+  font-family: $title-font;
+  font-weight: 700;
+  color: $c-title;
+}
+
+a{
+  color: $c-link;
+  display: inline-block;
+  transition: all .2s;
+  text-decoration: underline $c-link;
+
+  &:hover,
+  &:active,
+  &:focus{
+      text-decoration: none;
+  }
+
+   @media (min-width:$min-width-desktop){
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus{
+      text-decoration: underline $c-link;
+    }
+   }
+}
+
+section p{
+  max-width: $text-maxwidth;
+}

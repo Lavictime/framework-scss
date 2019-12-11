@@ -1,0 +1,80 @@
+// Settings
+
+/*   -------------------     Colors     -------------------   */
+
+//colors-text
+
+$c-font-base: #000;
+$c-title: #000;
+$c-link: blue;
+
+//colors-button
+
+$c-success: green;
+$c-error: red;
+
+//colors-background
+
+$c-red: #ff0000;
+$c-green: #00ff00;
+$c-blue: #0000ff;
+
+//Ajouter les variables dans la liste pour les nuances de couleurs
+//Pour chaque couleur, 10 nouvelles class se créent avec chacune une luminosité différente 
+//avec la nomenclature suivante .c-red-1  --> 1 = le plus clair, 10 = le plus sombre
+
+$colors: (
+  "green": $c-green,
+  "red" : $c-red,
+  "blue" : $c-blue
+);
+
+
+/*   -------------------     Fonts     -------------------   */
+
+//Text
+
+$base-font: "",sans-serif;
+$base-lineheight: 1.5;
+$base-fontsize: 1rem;
+
+$text-maxwidth: 64ch;
+
+//Hierarchy
+//La hierarchie défini la taille des polices par rapport à la font de base
+//$font-base * $hierarchy = $fontsize-1; | $font-base / $hierarchy = $fontsize--1; 
+
+$hierarchy: 1.3;
+
+//Titles
+
+$title-font: "",sans-serif;
+$title-lineheight: 1.1;
+
+//Links
+
+$link-font: "",sans-serif;
+$link-lineheight: 1.5;
+$link-size: 1rem;
+
+
+/*   -------------------     Layout    -------------------   */
+
+//Grid
+
+$column-nbr: 12;
+$column-width: 100%;
+
+//Breakpoint (responsive)
+
+$max-width-mobile: 411px;
+$min-width-tablet: 768px;
+$min-width-desktop: 1024px;
+$max-width-desktop: 1440px;
+
+//Margin - Padding
+
+$container-padding: 1rem;
+$section-margin: 3rem;
+
+

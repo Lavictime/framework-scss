@@ -1,0 +1,55 @@
+//Tools 
+
+/*   -------------------     Colors     -------------------   */
+
+@function colorbyunit($color, $dozen, $unit){
+	$color: lighten($color, 100%);
+	@return darken($color, (($dozen * 10) + $unit));
+}
+
+@function colortoarray($color) {
+	$lightness: lightness($color);
+	$dozen: floor($lightness / 10);
+	$unit: $lightness - ($dozen * 10);
+	$result: (0 : colorbyunit($color, 0, $unit),
+				 1 : colorbyunit($color, 1, $unit),
+				 2 : colorbyunit($color, 2, $unit),
+				 3 : colorbyunit($color, 3, $unit),
+				 4 : colorbyunit($color, 4, $unit),
+				 5 : colorbyunit($color, 5, $unit),
+				 6 : colorbyunit($color, 6, $unit),
+				 7 : colorbyunit($color, 7, $unit),
+				 8 : colorbyunit($color, 8, $unit),
+				 9 : colorbyunit($color, 9, $unit));
+	@return $result;
+}
+
+@each $name, $color in $colors{
+  @each $suffix, $value in colortoarray($color) {
+  .c-#{$name}-#{$suffix} {
+   	background-color: $value;
+  	}
+    
+  }
+}
+
+
+/*   -------------------     Fonts     -------------------   */
+
+@function pow($exponent){
+  $result: 1;
+  @for $i from 1 through $exponent{
+    $result : $result * $hierarchy;
+  }
+  @return $result;
+}
+
+$fontsize-1: $base-fontsize * pow(1);
+$fontsize-2: $base-fontsize * pow(2);
+$fontsize-3: $base-fontsize * pow(3);
+$fontsize-4: $base-fontsize * pow(4);
+$fontsize-5: $base-fontsize * pow(5);
+$fontsize-6: $base-fontsize * pow(6);
+$fontsize-7: $base-fontsize * pow(7);
+$fontsize--1: $base-fontsize / pow(1);
+$fontsize--2: $base-fontsize / pow(2);

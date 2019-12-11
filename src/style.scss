@@ -1,0 +1,22 @@
+//style
+
+//Settings
+@import "settings/settings.scss";
+
+//Tools
+@import "tools/tools.scss";
+
+//Generic
+@import "generic/generic.scss";
+
+//Atoms
+@import "atoms/typography.scss";
+@import "atoms/layout.scss";
+
+//Components
+@import "components/header.scss";
+@import "components/loud.scss";
+@import "components/footer.scss";
+
+//Utilities
+@import "utilities/utilities.scss";
