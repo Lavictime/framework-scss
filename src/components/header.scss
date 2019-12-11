@@ -1,0 +1,22 @@
+.header{
+  
+  &__title{
+    font-size: $fontsize-6;
+    color: $c-red;
+  }
+  h2{
+    font-size: $fontsize-5;
+  }
+  h3{
+    font-size: $fontsize-4;
+  }
+  h4{
+    font-size: $fontsize-3;
+  }
+  h5{
+    font-size: $fontsize-2;
+  }
+  h6{
+    font-size: $fontsize-1;
+  }
+}
